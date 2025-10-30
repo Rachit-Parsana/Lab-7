@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Car Showcase</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    .accordion-button {
+      font-weight: 600;
+    }
+
+    .flip-card {
+      position: relative;
+      height: 250px;
+      perspective: 1000px;
+    }
+
+    .flip-inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front,
+    .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      backface-visibility: hidden;
+      overflow: hidden;
+    }
+
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+
+    .btn-gradient {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: #fff;
+      transition: transform 0.2s;
+    }
+
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      color: #fff;
+    }
+
+    .table thead {
+      background: #343a40;
+      color: #fff;
+    }
+
+    .alert {
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="accordion container my-4" id="accordionExample">
+
+    <!-- ACCORDION 1 - CARDS -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Cars
+        </button>
+      </h2>
+
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row">
+
+            <!-- BMW M4 CS -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card">
+                <div class="flip-inner">
+                  <div class="flip-front">
+                    <img src="https://images.caradisiac.com/logos/2/6/8/8/282688/S0-bmw-m4-cs-2024encore-une-nouvelle-formule-208702.jpg"
+                      class="w-100 h-100" alt="BMW M4 CS">
+                  </div>
+                  <div class="flip-back">
+                    <img src="https://www.topgear.com/sites/default/files/images/cars-road-test/2024/07/02c6245a8e297e1d7b0b8d6e8d3e3b7f/bmw_m4_cs_1.jpg"
+                      class="w-100 h-100" alt="BMW M4 CS Back">
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 text-center">
+                <h5>BMW M4 CS</h5>
+                <p>High-performance coupe with track-focused dynamics and bold design.</p>
+                <button class="btn btn-lg rounded-pill shadow-sm px-4 py-2 btn-gradient">
+                  Buy This Car <i class="bi bi-cart3 ms-2"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Bugatti Chiron -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card">
+                <div class="flip-inner">
+                  <div class="flip-front">
+                    <img src="https://www.thespeedjournal.com/wp-content/uploads/2021/06/bugattichiron-super-sport-debut-05.jpg"
+                      class="w-100 h-100" alt="Bugatti Chiron">
+                  </div>
+                  <div class="flip-back">
+                    <img src="https://images.unsplash.com/photo-1688417438893-7d4b4da14a87?q=80&w=1200&auto=format&fit=crop"
+                      class="w-100 h-100" alt="Bugatti Chiron Back">
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 text-center">
+                <h5>Bugatti Chiron</h5>
+                <p>1,500 hp hypercar blending luxury interiors with record-breaking speed.</p>
+                <button class="btn btn-lg rounded-pill shadow-sm px-4 py-2 btn-gradient">
+                  Buy This Car <i class="bi bi-cart3 ms-2"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Mercedes GLS 660 Maybach -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card">
+                <div class="flip-inner">
+                  <div class="flip-front">
+                    <img src="https://us.motorsactu.com/wp-content/uploads/2019/11/Mercedes-BenzGLS_600_Maybach-2021-1280-01.jpg"
+                      class="w-100 h-100" alt="GLS 660 Maybach">
+                  </div>
+                  <div class="flip-back">
+                    <img src="https://imgd.aeplcdn.com/1920x1080/n/cw/ec/177511/maybach-gls-exterior-left-rear-three-quarter.jpeg?q=80"
+                      class="w-100 h-100" alt="GLS 660 Maybach Back">
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 text-center">
+                <h5>Mercedes GLS 660 Maybach</h5>
+                <p>Luxury SUV offering ultimate comfort and advanced driving technology.</p>
+                <button class="btn btn-lg rounded-pill shadow-sm px-4 py-2 btn-gradient">
+                  Buy This Car <i class="bi bi-cart3 ms-2"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCORDION 2 - ALERTS -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Alerts
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="alert d-flex align-items-center rounded-3 shadow-lg p-3 mb-3"
+            style="background: linear-gradient(90deg, #28a745, #5cd65c); color: white;">
+            <i class="bi bi-lightning-fill me-2 fs-4"></i>
+            <div>BMW M4 CS is now available! High-performance car ready for purchase.</div>
+          </div>
+
+          <div class="alert d-flex align-items-center rounded-3 shadow-lg p-3 mb-3"
+            style="background: linear-gradient(90deg, #ffc107, #ffdb4d); color: black;">
+            <i class="bi bi-exclamation-triangle-fill me-2 fs-4"></i>
+            <div>Bugatti Chiron stock is limited — hurry before it’s gone!</div>
+          </div>
+
+          <div class="alert d-flex align-items-center rounded-3 shadow-lg p-3 mb-3"
+            style="background: linear-gradient(90deg, #dc3545, #ff6b6b); color: white;">
+            <i class="bi bi-x-circle-fill me-2 fs-4"></i>
+            <div>Mercedes GLS Maybach requires premium membership verification.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCORDION 3 - BUTTONS -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Buttons
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body d-flex justify-content-between flex-wrap gap-3">
+          <button type="button" class="btn btn-secondary rounded-pill px-4 py-2 shadow-sm">BMW M4 CS Info</button>
+          <button type="button" class="btn btn-success rounded-pill px-4 py-2 shadow-sm">Bugatti Chiron Info</button>
+          <button type="button" class="btn btn-danger rounded-pill px-4 py-2 shadow-sm">Mercedes Maybach Info</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCORDION 4 - TABLE -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Tables
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="table-responsive">
+            <table class="table table-hover table-striped text-center align-middle shadow-sm">
+              <thead>
+                <tr>
+                  <th>Car</th>
+                  <th>Purchase Price</th>
+                  <th>Engine Type</th>
+                  <th>Horsepower</th>
+                  <th>Top Speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-secondary">
+                  <td>BMW M4 CS</td>
+                  <td>$85,000</td>
+                  <td>3.0L Twin-Turbo Inline-6</td>
+                  <td>503 hp</td>
+                  <td>180 mph</td>
+                </tr>
+                <tr class="table-success">
+                  <td>Bugatti Chiron</td>
+                  <td>$3,000,000</td>
+                  <td>8.0L Quad-Turbo W16</td>
+                  <td>1,479 hp</td>
+                  <td>261 mph</td>
+                </tr>
+                <tr class="table-danger">
+                  <td>Mercedes GLS 660 Maybach</td>
+                  <td>$160,000</td>
+                  <td>4.0L Twin-Turbo V8</td>
+                  <td>603 hp</td>
+                  <td>155 mph</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
